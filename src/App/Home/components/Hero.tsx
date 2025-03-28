@@ -8,8 +8,8 @@ export default function HeroSection() {
   const { theme } = themeProvider;
 
   return (
-    <div
-      className={`min-h-screen flex flex-col justify-center items-center text-center p-6 ${
+    <section
+      className={`w-full h-screen flex flex-col items-center justify-center p-6 ${
         theme === "dark"
           ? "bg-gradient-to-r from-blue-900 to-purple-800"
           : "bg-white"
@@ -27,15 +27,15 @@ export default function HeroSection() {
           theme === "dark" ? "text-white" : "text-gray-900"
         }`}
       >
-        Welcome to Fairy Tales
+        Hello! I'm Neath
       </h1>
       <p
         className={`text-lg mt-2 ${
           theme === "dark" ? "text-gray-300" : "text-gray-700"
         }`}
       >
-        Discover enchanting stories for children and parents alike.
+        Front-End Web Developer
       </p>
-    </div>
+    </section>
   );
 }
