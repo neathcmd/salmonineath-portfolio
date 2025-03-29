@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
+
 :root {
   --bg-color: #ffffff;
   --text-color: #1c1c22;
@@ -9,7 +11,8 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Fira Code", monospace;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   background-color: var(--bg-color);
