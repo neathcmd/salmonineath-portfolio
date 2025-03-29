@@ -3,10 +3,111 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sal Monineath | Portfolio</title>
+    <title>Sal Monineath | Portfolio - Web Developer & Designer</title>
+    <meta name="title" content="Sal Monineath | Professional Portfolio" />
+    <meta
+      name="description"
+      content="Welcome to Sal Monineath's portfolio showcasing web development projects, skills, and professional experience. Explore my work in frontend and backend development."
+    />
+    <meta name="author" content="Sal Monineath" />
+    <meta
+      name="keywords"
+      content="Sal Monineath, web developer, portfolio, frontend developer, React developer, web design, programming, software engineer"
+    />
+
+    <!-- Canonical URL to prevent duplicate content issues -->
+    <link rel="canonical" href="https://yourdomain.com" />
+
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourdomain.com" />
+    <meta
+      property="og:title"
+      content="Sal Monineath | Professional Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Welcome to Sal Monineath's portfolio showcasing web development projects, skills, and professional experience."
+    />
+    <meta property="og:image" content="https://yourdomain.com/og-image.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://yourdomain.com" />
+    <meta
+      property="twitter:title"
+      content="Sal Monineath | Professional Portfolio"
+    />
+    <meta
+      property="twitter:description"
+      content="Welcome to Sal Monineath's portfolio showcasing web development projects, skills, and professional experience."
+    />
+    <meta
+      property="twitter:image"
+      content="https://yourdomain.com/twitter-image.jpg"
+    />
+
+    <!-- Preload Critical Assets -->
+    <link
+      rel="preload"
+      href="/fonts/main-font.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <!-- Theme Color for Browser UI -->
+    <meta name="theme-color" content="#0a192f" />
+
+    <!-- Structured Data for Person (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sal Monineath",
+        "url": "https://yourdomain.com",
+        "sameAs": [
+          "https://linkedin.com/in/yourprofile",
+          "https://github.com/yourusername",
+          "https://twitter.com/yourusername"
+        ],
+        "jobTitle": "Web Developer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Your Company"
+        }
+      }
+    </script>
+
+    <!-- Structured Data for Portfolio Website -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Sal Monineath Portfolio",
+        "url": "https://yourdomain.com",
+        "description": "Professional portfolio of Sal Monineath, showcasing web development projects and skills.",
+        "author": {
+          "@type": "Person",
+          "name": "Sal Monineath"
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      <div style="padding: 20px; text-align: center">
+        <h1>JavaScript Required</h1>
+        <p>
+          Please enable JavaScript to view Sal Monineath's portfolio website.
+        </p>
+      </div>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
