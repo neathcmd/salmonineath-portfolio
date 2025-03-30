@@ -1,54 +1,71 @@
-# React + TypeScript + Vite
+# SAL MONINEATH PORTFOLIO
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Showcase Your Skills, Inspire Your Future**
 
-Currently, two official plugins are available:
+![Last Commit](https://img.shields.io/github/last-commit/neathcmd/salmonineath-portfolio?style=flat-square)
+![Top Language](https://img.shields.io/github/languages/top/neathcmd/salmonineath-portfolio?style=flat-square)
+![Language Count](https://img.shields.io/github/languages/count/neathcmd/salmonineath-portfolio?style=flat-square)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Built With
 
-## Expanding the ESLint configuration
+- React Js
+- Typescript
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+##
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Table of Contents
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- [Overview](#overview)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- [Feature](#feature)
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+- [Getting Started](https://www.example.com)
+
+  - [Prerequisites](https://www.example.com)
+
+  - [Installation](https://www.example.com)
+
+  - [Usage](https://www.example.com)
+
+  - [Testing](https://www.example.com)
+
+##
+
+## 🌟 Overview
+
+The `salmonineath-portfolio` is a cutting-edge web application designed to showcase professional work with exceptional user experience and aesthetic appeal. Built with modern web technologies, it combines performance with beautiful design.
+
+## 🚀 Why salmonineath-portfolio?
+
+This project revolutionizes portfolio building by offering:
+
+<div align="center">
+  <img src="https://res.cloudinary.com/demo/image/upload/v1633456327/portfolio-showcase.gif" width="600" alt="Portfolio Demo">
+</div>
+
+### ✨ Core Features
+
+| Feature                      | Description                                                | Technology                                                                                                        |
+| ---------------------------- | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| **Tailwind CSS Integration** | Utility-first CSS framework for rapid UI development       | ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white&style=flat-square) |
+| **TypeScript Foundation**    | Type-safe JavaScript development                           | ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white&style=flat-square)   |
+| **Dynamic Theming**          | Automatic light/dark mode with system preference detection | ![Theme](https://img.shields.io/badge/Dynamic_Theming-00ff99?style=flat-square)                                   |
+| **Interactive Components**   | Engaging UI elements with smooth transitions               | ![Framer](https://img.shields.io/badge/Animations-00ff99?style=flat-square)                                       |
+| **Performance Optimized**    | 90+ Lighthouse scores out of the box                       | ![Performance](https://img.shields.io/badge/Performance-00ff99?style=flat-square)                                 |
+
+## ✨ Features
+
+- Modern, responsive design
+- Interactive UI components
+- Dark/Light mode toggle
+- Project showcase section
+- Skills visualization
+- Smooth animations
+
+## 🛠️ Installation
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/yourusername/salmonineath-portfolio.git
 ```
