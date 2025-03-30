@@ -16,26 +16,36 @@ const Buttons = () => {
   }, []);
 
   return (
-    <div data-aos="fade-right" data-aos-delay="400" className="mt-6 flex gap-4">
+    <div
+      data-aos="fade-right"
+      data-aos-delay="400"
+      className="flex flex-wrap gap-4"
+    >
       {/* Download CV Button */}
       <div className="relative group" data-aos="zoom-in-up">
-        {/* External glow wrapper */}
+        {/* Enhanced glow wrapper */}
         <div
           className={`absolute -inset-0.5 rounded-lg ${
             isDarkMode
               ? "bg-gradient-to-r from-emerald-400 to-green-400"
               : "bg-gradient-to-r from-emerald-500 to-green-500"
-          } opacity-0 group-hover:opacity-75 blur-sm transition-opacity duration-300`}
+          } opacity-0 group-hover:opacity-100 blur-sm transition-all duration-300 group-hover:scale-105`}
         />
+
         <a
           href="#"
-          className={`relative flex items-center justify-center gap-2 py-4 px-6 ${
-            isDarkMode
-              ? "bg-emerald-400 text-gray-900"
-              : "bg-emerald-500 text-gray-900"
-          } font-medium rounded-lg transition-all duration-300 hover:border ${
-            isDarkMode ? "hover:border-emerald-400" : "hover:border-emerald-500"
-          } z-10`}
+          className={`relative flex items-center justify-center gap-2 py-4 px-6 font-medium rounded-lg transition-all duration-300 z-10
+      ${
+        isDarkMode
+          ? "bg-gradient-to-r from-emerald-400 to-green-400 text-gray-900 hover:from-emerald-300 hover:to-green-300"
+          : "bg-gradient-to-r from-emerald-500 to-green-500 text-gray-900 hover:from-emerald-400 hover:to-green-400"
+      }
+      border ${
+        isDarkMode ? "border-emerald-400/30" : "border-emerald-500/30"
+      } hover:border-transparent
+      shadow-lg ${
+        isDarkMode ? "shadow-emerald-400/20" : "shadow-emerald-500/20"
+      } hover:shadow-emerald-400/40`}
         >
           Download CV
           <svg
@@ -58,25 +68,31 @@ const Buttons = () => {
         data-aos="zoom-in-up"
         data-aos-delay="200"
       >
-        {/* External glow wrapper */}
+        {/* Enhanced glow wrapper with animation */}
         <div
           className={`absolute -inset-0.5 rounded-lg ${
             isDarkMode
               ? "bg-gradient-to-r from-emerald-400 to-green-400"
               : "bg-gradient-to-r from-emerald-500 to-green-500"
-          } opacity-0 group-hover:opacity-75 blur-sm transition-opacity duration-300`}
+          } opacity-0 group-hover:opacity-100 blur-sm transition-all duration-300 group-hover:scale-105`}
         />
+
         <a
           href="#"
-          className={`relative flex items-center justify-center gap-2 py-4 px-6 border ${
-            isDarkMode
-              ? "border-emerald-400 text-emerald-400"
-              : "border-emerald-500 text-emerald-500"
-          } font-medium rounded-lg transition-all duration-300 ${
-            isDarkMode
-              ? "hover:bg-emerald-400 hover:text-gray-900"
-              : "hover:bg-emerald-500 hover:text-gray-900"
-          } z-10`}
+          className={`relative flex items-center justify-center gap-2 py-4 px-6 font-medium rounded-lg transition-all duration-300 z-10
+      border ${
+        isDarkMode
+          ? "border-emerald-400 text-emerald-400 hover:text-gray-900"
+          : "border-emerald-500 text-emerald-500 hover:text-gray-900"
+      }
+      bg-gradient-to-r ${
+        isDarkMode
+          ? "from-transparent via-emerald-900/10 to-transparent hover:from-emerald-400 hover:to-green-400"
+          : "from-transparent via-emerald-100/50 to-transparent hover:from-emerald-500 hover:to-green-500"
+      }
+      shadow-lg ${
+        isDarkMode ? "shadow-emerald-400/10" : "shadow-emerald-500/10"
+      } hover:shadow-emerald-400/30`}
         >
           Contact me
           <svg

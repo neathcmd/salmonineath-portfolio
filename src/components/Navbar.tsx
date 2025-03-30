@@ -166,23 +166,34 @@ export default function Navbar(): JSX.Element {
                   role="switch"
                   aria-checked={theme === "dark"}
                 >
+                  {/* Track */}
                   <div
                     className={`
-                      absolute inset-0 bg-gray-300 rounded-full 
+                      absolute inset-0 rounded-full 
                       transition-colors duration-300
                       ${theme === "dark" ? "bg-blue-600" : "bg-gray-400"}
                     `}
                   />
+
+                  {/* Thumb with better contrast */}
                   <div
                     className={`
                       absolute top-1/2 -translate-y-1/2 
-                      w-5 h-5 bg-white rounded-full 
-                      shadow-md transition-all duration-300
-                      flex items-center justify-center text-sm
-                      ${theme === "dark" ? "translate-x-6" : "translate-x-1"}
+                      w-6 h-6 rounded-full shadow-lg
+                      transition-all duration-300 flex
+                      items-center justify-center
+                      ${
+                        theme === "dark"
+                          ? "translate-x-6 bg-gray-800 text-yellow-200"
+                          : "translate-x-0 bg-white text-yellow-500"
+                      }
                     `}
                   >
-                    {theme === "dark" ? "🌙" : "☀️"}
+                    {theme === "dark" ? (
+                      <span className="text-xs">🌙</span>
+                    ) : (
+                      <span className="text-xs">☀️</span>
+                    )}
                   </div>
                 </div>
               </li>

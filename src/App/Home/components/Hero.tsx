@@ -53,35 +53,35 @@ export default function HeroSection() {
 
   return (
     <section
-      className={`w-full h-screen flex items-center justify-center p-6 ${
+      className={`w-full min-h-screen flex items-center justify-center p-6 ${
         theme === "dark" ? "dark-theme" : "light-theme"
       }`}
     >
-      <article className="flex flex-col md:flex-row items-center justify-between gap-8 max-w-5xl w-full">
+      <article className="flex flex-col md:flex-row items-center justify-between gap-8 w-full container mx-auto">
         {/* Text Section */}
-        <div className="text-center md:text-left order-2 md:order-1 max-w-lg">
+        <div className="text-center md:text-left order-2 md:order-1 max-w-2xl space-y-6">
           {/* Main Heading */}
           <h1
             data-aos="fade-right"
-            className={`text-5xl md:text-6xl font-extrabold leading-tight mb-2 ${
+            className={`text-5xl md:text-6xl font-extrabold leading-tight  ${
               theme === "dark" ? "text-white" : "text-gray-900"
             }`}
           >
             <span
-              className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ff99] to-[#00cc99]"
+              className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ff99] via-[#00dd99] to-[#00cc99]"
               data-aos="fade-right"
               data-aos-delay="100"
             >
               Hello!
-            </span>{" "}
-            <span data-aos="fade-right" data-aos-delay="150">
+            </span>
+            <span className="pl-4" data-aos="fade-right" data-aos-delay="150">
               I'm Neath
             </span>
           </h1>
 
           {/* Animated Subheading */}
           <div
-            className={`relative text-2xl md:text-3xl font-medium mt-3 h-10 ${
+            className={`relative text-2xl md:text-3xl font-medium h-10 ${
               theme === "dark" ? "text-gray-300" : "text-gray-600"
             }`}
           >
@@ -99,7 +99,7 @@ export default function HeroSection() {
           <p
             data-aos="fade-right"
             data-aos-delay="300"
-            className={`text-lg md:text-xl mt-6 leading-relaxed ${
+            className={`text-lg md:text-xl leading-relaxed ${
               theme === "dark" ? "text-gray-300" : "text-gray-600"
             }`}
           >
@@ -111,7 +111,7 @@ export default function HeroSection() {
 
           {/* Social Icons */}
           <div
-            className="mt-8 flex justify-center md:justify-start"
+            className=" flex justify-center md:justify-start"
             data-aos="fade-right"
             data-aos-delay="400"
           >
@@ -119,7 +119,7 @@ export default function HeroSection() {
           </div>
 
           {/* Action Buttons */}
-          <div>
+          <div className="flex items-center justify-center md:justify-start">
             <Buttons />
           </div>
         </div>
@@ -142,9 +142,9 @@ export default function HeroSection() {
             className={`relative rounded-full p-1 overflow-hidden transition-all duration-300 
       ${
         theme === "dark"
-          ? "shadow-[0_0_25px_rgba(0,255,153,0.6)] hover:shadow-[0_0_35px_rgba(0,255,153,0.8)]"
-          : "shadow-[0_0_20px_rgba(0,255,153,0.4)] hover:shadow-[0_0_30px_rgba(0,255,153,0.6)]"
-      } transform hover:scale-[1.02] group-hover:scale-[1.01]`}
+          ? "shadow-[0_0_25px_rgba(0,255,153,0.6)] hover:shadow-[0_0_40px_rgba(0,255,153,0.9)]"
+          : "shadow-[0_0_20px_rgba(0,255,153,0.4)] hover:shadow-[0_0_35px_rgba(0,255,153,0.7)]"
+      } animate-bounce-slow`}
           >
             <div
               className={`rounded-full animate-spin-slow relative
@@ -152,17 +152,17 @@ export default function HeroSection() {
           theme === "dark"
             ? "bg-gradient-to-r from-[#00ff99] via-[#0099ff] to-[#00ff99]"
             : "bg-gradient-to-r from-[#00ff99] via-[#0099ff] to-[#00ff99]"
-        } p-0.5`}
+        } p-1`}
             >
               <div
                 className={`bg-${
                   theme === "dark" ? "[#1c1c22]" : "white"
-                } rounded-full p-0.5 overflow-hidden`}
+                } rounded-full p-1 overflow-hidden`}
               >
                 <img
                   src={profileImageUrl}
                   alt="Neath's profile"
-                  className="rounded-full w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 object-cover transform transition-transform duration-700 group-hover:scale-105"
+                  className="rounded-full w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover transform transition-transform duration-700 hover:scale-105"
                   loading="eager"
                   decoding="async"
                 />
