@@ -7,7 +7,7 @@
 
 .dark {
   --bg-color: #1c1c22;
-  --text-color: #00ff99;
+  --text-color: white;
 }
 
 body {
@@ -18,4 +18,12 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.3s, color 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  padding-top: 6rem;
 }

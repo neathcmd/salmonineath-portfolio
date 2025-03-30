@@ -3,7 +3,7 @@ import { ThemeContext } from "../../App/Ui/ThemeContext";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const Buttons = () => {
+const AboutSectionButtons = () => {
   const { theme } = useContext(ThemeContext);
   const isDarkMode = theme === "dark";
 
@@ -17,7 +17,7 @@ const Buttons = () => {
 
   return (
     <div data-aos="fade-right" data-aos-delay="400" className="flex gap-4">
-      {/* Download CV Button */}
+      {/*  View My Work Button */}
       <div className="relative group" data-aos="zoom-in-up">
         {/* Enhanced glow wrapper */}
         <div
@@ -29,7 +29,7 @@ const Buttons = () => {
         />
 
         <a
-          href="#"
+          href="#portfolio"
           className={`relative flex items-center justify-center gap-2 py-4 px-6 font-medium rounded-lg transition-all duration-300 z-10
       ${
         isDarkMode
@@ -43,22 +43,23 @@ const Buttons = () => {
         isDarkMode ? "shadow-emerald-400/20" : "shadow-emerald-500/20"
       } hover:shadow-emerald-400/40`}
         >
-          Download CV
+          View My Work
           <svg
-            className="w-4 h-4 transition-transform duration-300 group-hover:translate-y-1"
+            className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
             fill="currentColor"
-            viewBox="0 0 20 20"
           >
             <path
               fillRule="evenodd"
-              d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
               clipRule="evenodd"
+              d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
             />
           </svg>
         </a>
       </div>
 
-      {/* Hire Me Button */}
+      {/* My Tech Stack Button */}
       <div
         className="relative group"
         data-aos="zoom-in-up"
@@ -74,7 +75,7 @@ const Buttons = () => {
         />
 
         <a
-          href="#contact"
+          href="#skills"
           className={`relative flex items-center justify-center gap-2 py-4 px-6 font-medium rounded-lg transition-all duration-300 z-10
       border ${
         isDarkMode
@@ -90,15 +91,16 @@ const Buttons = () => {
         isDarkMode ? "shadow-emerald-400/10" : "shadow-emerald-500/10"
       } hover:shadow-emerald-400/30`}
         >
-          Hire Me
+          My Tech Stack
           <svg
             className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 640 512"
             fill="currentColor"
-            viewBox="0 0 20 20"
           >
             <path
               fillRule="evenodd"
-              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z"
+              d="M64 96c0-35.3 28.7-64 64-64l384 0c35.3 0 64 28.7 64 64l0 256-64 0 0-256L128 96l0 256-64 0L64 96zM0 403.2C0 392.6 8.6 384 19.2 384l601.6 0c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8L76.8 480C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"
               clipRule="evenodd"
             />
           </svg>
@@ -108,4 +110,4 @@ const Buttons = () => {
   );
 };
 
-export default Buttons;
+export default AboutSectionButtons;

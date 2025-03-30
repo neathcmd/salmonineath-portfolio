@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { ThemeContext } from "../../src/App/Ui/ThemeContext";
+import ScrollProgressBar from "./ProgressBar/ScrollProgressBar";
 
 // Define TypeScript interfaces
 interface NavItem {
@@ -11,8 +12,14 @@ interface ThemeContextType {
   theme: "light" | "dark";
   toggleTheme: () => void;
 }
-
+// LOGO
 const LOGO = "Sal Monineath";
+// const LOGO_URL =
+//   theme === "dark"
+//     ? "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2iKJ6qEfbvBfLD_yIv1Rs2_lVykUmPjgcVg&s"
+//     : "https://cdn-icons-png.flaticon.com/512/6528/6528597.png";
+
+// Navbar
 const NAV_ITEMS: NavItem[] = [
   { label: "Home", href: "#hero" },
   { label: "About", href: "#about" },
@@ -107,21 +114,32 @@ export default function Navbar(): JSX.Element {
               : "bg-white text-gray-900"
           }
           shadow-md transition-all duration-300
-          ${scrolled ? "py-2" : "py-6"}
+          ${scrolled ? "py-6" : "py-6"}
         `}
         aria-label="Main Navigation"
       >
         <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8">
           {/* Logo */}
-          <a
-            href="/"
-            className={`text-xl sm:text-2xl md:text-3xl font-bold hover:text-[#00ff99] transition-all duration-300 ${
-              scrolled ? "scale-90" : ""
-            }`}
-            aria-label="Home"
-          >
-            {LOGO}
-          </a>
+          <div className="flex items-center">
+            {/* <img
+              src={LOGO_URL}
+              alt="Logo"
+              className="h-8 w-8 sm:h-10 sm:w-10 mr-2 md:mr-3 transition-all duration-300 hover:scale-110"
+            /> */}
+            <a
+              href="/"
+              className={`text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r ${
+                theme === "dark"
+                  ? "from-[#00ff99] to-[#00cc99] hover:from-[#00cc99] hover:to-[#00ff99]"
+                  : "from-[#00aa77] to-[#00ff99] hover:from-[#00ff99] hover:to-[#00aa77]"
+              } bg-clip-text text-transparent transition-all duration-300 ${
+                scrolled ? "scale-100" : ""
+              }`}
+              aria-label="Home"
+            >
+              {LOGO}
+            </a>
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:block">
@@ -353,6 +371,8 @@ export default function Navbar(): JSX.Element {
           </li>
         </ul>
       </nav>
+      {/* ProgressBar */}
+      <ScrollProgressBar />
     </>
   );
 }
