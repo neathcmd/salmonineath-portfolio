@@ -12,7 +12,7 @@ export default function HeroSection() {
   const [typingSpeed, setTypingSpeed] = useState(150);
 
   const roles = [
-    "Front-End Web Developer",
+    "junior: Front-End Web Developer",
     "Graphic Designer",
     "UI/UX Designer",
   ];
@@ -53,19 +53,16 @@ export default function HeroSection() {
 
   return (
     <section
-      className={`w-full min-h-screen flex items-center justify-center p-6 ${
-        theme === "dark" ? "dark-theme" : "light-theme"
-      }`}
+      id="hero"
+      className="w-full min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16"
     >
-      <article className="flex flex-col md:flex-row items-center justify-between gap-8 w-full container mx-auto">
-        {/* Text Section */}
-        <div className="text-center md:text-left order-2 md:order-1 max-w-2xl space-y-6">
+      <article className="flex flex-col-reverse md:flex-row items-center justify-center gap-8 lg:gap-12 w-full max-w-7xl mx-auto">
+        {/* Text Section - Improved responsive widths */}
+        <div className="w-full md:w-1/2 text-center md:text-left space-y-4 sm:space-y-6">
           {/* Main Heading */}
           <h1
             data-aos="fade-right"
-            className={`text-5xl md:text-6xl font-extrabold leading-tight  ${
-              theme === "dark" ? "text-white" : "text-gray-900"
-            }`}
+            className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight"
           >
             <span
               className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ff99] via-[#00dd99] to-[#00cc99]"
@@ -74,95 +71,98 @@ export default function HeroSection() {
             >
               Hello!
             </span>
-            <span className="pl-4" data-aos="fade-right" data-aos-delay="150">
+            <span
+              className="pl-2 sm:pl-4"
+              data-aos="fade-right"
+              data-aos-delay="150"
+            >
               I'm Neath
             </span>
           </h1>
 
-          {/* Animated Subheading */}
-          <div
-            className={`relative text-2xl md:text-3xl font-medium h-10 ${
-              theme === "dark" ? "text-gray-300" : "text-gray-600"
-            }`}
-          >
+          {/* Animated Subheading - Better mobile sizing */}
+          <div className="relative text-xl sm:text-2xl md:text-3xl font-medium h-8 sm:h-10">
             <h2
               data-aos="fade-right"
               data-aos-delay="200"
               className="absolute top-0 left-0 w-full"
             >
               <span className="inline-block min-w-[1ch]">{displayText}</span>
-              <span className="ml-1.5 inline-block w-1 h-8 bg-[#00ff99] animate-blink align-middle"></span>
+              <span className="ml-1 sm:ml-1.5 inline-block w-0.5 sm:w-1 h-6 sm:h-8 bg-[#00ff99] animate-blink align-middle"></span>
             </h2>
           </div>
 
-          {/* Description Paragraph */}
+          {/* Description Paragraph - Better mobile readability */}
           <p
             data-aos="fade-right"
             data-aos-delay="300"
-            className={`text-lg md:text-xl leading-relaxed ${
-              theme === "dark" ? "text-gray-300" : "text-gray-600"
-            }`}
+            className="text-base sm:text-lg leading-relaxed"
           >
-            <span className="font-medium">Aspiring front-end developer</span>{" "}
-            with expertise in modern web technologies, responsive design, and
-            performance optimization. Let's collaborate to bring your digital
-            vision to life!
+            <span className="font-medium">
+              Front-end developer skilled in modern web tech,
+            </span>{" "}
+            responsive design, and performance optimization. Let&apos;s build
+            something amazing together!
           </p>
 
-          {/* Social Icons */}
+          {/* Social Icons - Better alignment */}
           <div
-            className=" flex justify-center md:justify-start"
+            className="flex justify-center md:justify-start mt-4 sm:mt-6"
             data-aos="fade-right"
             data-aos-delay="400"
           >
             <SocialIcons />
           </div>
 
-          {/* Action Buttons */}
-          <div className="flex items-center justify-center md:justify-start">
+          {/* Action Buttons - Better spacing */}
+          <div
+            className="flex flex-wrap justify-center md:justify-start gap-4 mt-6"
+            data-aos="fade-right"
+            data-aos-delay="500"
+          >
             <Buttons />
           </div>
         </div>
 
-        {/* Image Section */}
+        {/* Image Section - Improved responsive sizing */}
         <div
           data-aos="fade-left"
-          className="order-1 md:order-2 relative flex justify-center"
+          className="relative flex justify-center w-full md:w-1/2"
         >
           <div
-            className={`absolute inset-0 rounded-full blur-md opacity-70 transform scale-90 
-      ${
-        theme === "dark"
-          ? "bg-gradient-to-r from-[#00ff99]/40 via-[#0099ff]/30 to-[#00ff99]/40"
-          : "bg-gradient-to-r from-[#00ff99]/30 via-[#0099ff]/20 to-[#00ff99]/30"
-      } animate-pulse-slow`}
+            className={`absolute rounded-full blur-md opacity-70 transform scale-90 
+              ${
+                theme === "dark"
+                  ? "bg-gradient-to-r from-[#00ff99]/40 via-[#0099ff]/30 to-[#00ff99]/40"
+                  : "bg-gradient-to-r from-[#00ff99]/30 via-[#0099ff]/20 to-[#00ff99]/30"
+              } animate-pulse-slow`}
             aria-hidden="true"
           />
           <div
             className={`relative rounded-full p-1 overflow-hidden transition-all duration-300 
-      ${
-        theme === "dark"
-          ? "shadow-[0_0_25px_rgba(0,255,153,0.6)] hover:shadow-[0_0_40px_rgba(0,255,153,0.9)]"
-          : "shadow-[0_0_20px_rgba(0,255,153,0.4)] hover:shadow-[0_0_35px_rgba(0,255,153,0.7)]"
-      } animate-bounce-slow`}
+              ${
+                theme === "dark"
+                  ? "shadow-[0_0_15px_rgba(0,255,153,0.6)] hover:shadow-[0_0_25px_rgba(0,255,153,0.9)]"
+                  : "shadow-[0_0_10px_rgba(0,255,153,0.4)] hover:shadow-[0_0_20px_rgba(0,255,153,0.7)]"
+              } animate-bounce-slow w-[240px] h-[240px] sm:w-[280px] sm:h-[280px] md:w-[320px] md:h-[320px] lg:w-[360px] lg:h-[360px]`}
           >
             <div
               className={`rounded-full animate-spin-slow relative
-        ${
-          theme === "dark"
-            ? "bg-gradient-to-r from-[#00ff99] via-[#0099ff] to-[#00ff99]"
-            : "bg-gradient-to-r from-[#00ff99] via-[#0099ff] to-[#00ff99]"
-        } p-1`}
+                ${
+                  theme === "dark"
+                    ? "bg-gradient-to-r from-[#00ff99] via-[#0099ff] to-[#00ff99]"
+                    : "bg-gradient-to-r from-[#00ff99] via-[#0099ff] to-[#00ff99]"
+                } p-1 w-full h-full`}
             >
               <div
                 className={`bg-${
                   theme === "dark" ? "[#1c1c22]" : "white"
-                } rounded-full p-1 overflow-hidden`}
+                } rounded-full p-1 overflow-hidden w-full h-full`}
               >
                 <img
                   src={profileImageUrl}
                   alt="Neath's profile"
-                  className="rounded-full w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover transform transition-transform duration-700 hover:scale-105"
+                  className="rounded-full w-full h-full object-cover transform transition-transform duration-700 hover:scale-105"
                   loading="eager"
                   decoding="async"
                 />

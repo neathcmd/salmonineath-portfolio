@@ -1,17 +1,39 @@
-import HerSection from "./components/Hero";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import HerSection from "./components/Hero";
+import AboutSection from "./components/About";
+import CodeLoader from "../../components/Loading/CodeLoader";
+
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
-    AOS.init({
-      duration: 1000, // Animation duration in milliseconds
-      once: true, // Whether animation should happen only once
-    });
+    // Initialize AOS after loading completes
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+      // Initialize AOS after content is loaded
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    }, 2000); // Show loader for 2 seconds
+
+    return () => clearTimeout(timer);
   }, []);
+
+  if (isLoading) {
+    return (
+      <div className="flex justify-center items-center min-h-screen">
+        <CodeLoader />
+      </div>
+    );
+  }
+
   return (
     <main>
       <HerSection />
+      <AboutSection />
     </main>
   );
 }
