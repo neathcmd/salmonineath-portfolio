@@ -54,9 +54,9 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="w-full min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16"
+      className="w-full min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8"
     >
-      <article className="flex flex-col-reverse md:flex-row items-center justify-center gap-8 lg:gap-12 w-full max-w-7xl mx-auto">
+      <article className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 w-full max-w-7xl mx-auto">
         {/* Text Section - Improved responsive widths */}
         <div className="w-full md:w-1/2 text-center md:text-left space-y-4 sm:space-y-6">
           {/* Main Heading */}
