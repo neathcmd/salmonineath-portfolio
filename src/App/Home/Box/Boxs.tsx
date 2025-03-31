@@ -7,9 +7,9 @@ export default function Boxs() {
         <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-[#00ff99] to-[#00cc99] opacity-0 group-hover:opacity-70 blur-sm transition-opacity duration-300"></div>
 
         <div className="relative flex items-center justify-center w-30 h-28 bg-gradient-to-r from-[#00ff99] via-[#00dd99] to-[#00cc99] rounded-lg shadow-md hover:shadow-lg transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(0,255,153,0.7)]">
-          <div className="flex flex-col items-center justify-center h-full w-full p-2 text-white">
+          <div className="flex flex-col items-center justify-center h-full w-full p-2 text-[#1c1c22]">
             <span className="text-2xl font-bold mb-1">12+</span>
-            <div className="w-12 h-0.5 bg-white rounded-full my-1 opacity-70"></div>
+            <div className="w-12 h-0.5 bg-[#1c1c22] rounded-full my-1 opacity-70"></div>
             <p className="text-center text-md font-medium">Projects</p>
           </div>
         </div>
@@ -25,9 +25,9 @@ export default function Boxs() {
         <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-[#00ff99] to-[#00cc99] opacity-0 group-hover:opacity-70 blur-sm transition-opacity duration-300"></div>
 
         <div className="relative flex items-center justify-center w-30 h-28 bg-gradient-to-r from-[#00ff99] via-[#00dd99] to-[#00cc99] rounded-lg shadow-md hover:shadow-lg transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(0,255,153,0.7)]">
-          <div className="flex flex-col items-center justify-center h-full w-full p-2 text-white">
+          <div className="flex flex-col items-center justify-center h-full w-full p-2 text-[#1c1c22]">
             <span className="text-2xl font-bold mb-1">12+</span>
-            <div className="w-12 h-0.5 bg-white rounded-full my-1 opacity-70"></div>
+            <div className="w-12 h-0.5 bg-[#1c1c22] rounded-full my-1 opacity-70"></div>
             <p className="text-center text-md font-medium">Years Experience</p>
           </div>
         </div>
@@ -43,9 +43,9 @@ export default function Boxs() {
         <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-[#00ff99] to-[#00cc99] opacity-0 group-hover:opacity-70 blur-sm transition-opacity duration-300"></div>
 
         <div className="relative flex items-center justify-center w-30 h-28 bg-gradient-to-r from-[#00ff99] via-[#00dd99] to-[#00cc99] rounded-lg shadow-md hover:shadow-lg transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(0,255,153,0.7)]">
-          <div className="flex flex-col items-center justify-center h-full w-full p-2 text-white">
+          <div className="flex flex-col items-center justify-center h-full w-full p-2 text-[#1c1c22]">
             <span className="text-2xl font-bold mb-1">12+</span>
-            <div className="w-12 h-0.5 bg-white rounded-full my-1 opacity-70"></div>
+            <div className="w-12 h-0.5 bg-[#1c1c22] rounded-full my-1 opacity-70"></div>
             <p className="text-center text-md font-medium">Happy Clients</p>
           </div>
         </div>
