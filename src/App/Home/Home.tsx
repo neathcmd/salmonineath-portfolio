@@ -3,7 +3,13 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import HerSection from "./components/Hero";
 import AboutSection from "./components/About";
+import Education from "./components/Education";
 import CodeLoader from "../../components/Loading/CodeLoader";
+import Experience from "./components/Experience";
+import TechStack from "./components/TechStack";
+import Portfolio from "./components/Portfolio";
+import Blog from "./components/Blog";
+import Contact from "./components/Contact";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -34,6 +40,12 @@ export default function Home() {
     <main>
       <HerSection />
       <AboutSection />
+      <Education />
+      <Experience />
+      <TechStack />
+      <Portfolio />
+      <Blog />
+      <Contact />
     </main>
   );
 }

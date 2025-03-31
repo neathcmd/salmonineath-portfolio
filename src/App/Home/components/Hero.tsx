@@ -12,7 +12,7 @@ export default function HeroSection() {
   const [typingSpeed, setTypingSpeed] = useState(150);
 
   const roles = [
-    "junior: Front-End Web Developer",
+    "Front-End Web Developer",
     "Graphic Designer",
     "UI/UX Designer",
   ];
@@ -79,6 +79,7 @@ export default function HeroSection() {
               I'm Neath
             </span>
           </h1>
+          <div className="w-20 h-1 bg-[#00ff99] shadow-[0_0_10px_rgba(0,255,153,0.7)]"></div>
 
           {/* Animated Subheading - Better mobile sizing */}
           <div className="relative text-xl sm:text-2xl md:text-3xl font-medium h-8 sm:h-10">
