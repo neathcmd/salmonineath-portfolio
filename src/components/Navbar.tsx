@@ -13,7 +13,7 @@ interface ThemeContextType {
   toggleTheme: () => void;
 }
 // LOGO
-const LOGO = "Sal Monineath";
+const LOGO = "Portfolio";
 
 // Navbar
 const NAV_ITEMS: NavItem[] = [

@@ -75,7 +75,7 @@ const AboutSectionButtons = () => {
         />
 
         <a
-          href="#skills"
+          href="#tech-stack"
           className={`relative flex items-center justify-center gap-2 py-4 px-6 font-medium rounded-lg transition-all duration-300 z-10
       border ${
         isDarkMode
