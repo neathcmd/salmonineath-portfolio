@@ -5,6 +5,7 @@ import { ThemeProvider } from "./App/Ui/ThemeContext";
 import Navber from "./components/Navbar";
 import Home from "./App/Home/Home";
 import CodeLoader from "./components/Loading/CodeLoader";
+import Footer from "./components/Footer";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -32,6 +33,7 @@ function App() {
       <main>
         <Home />
       </main>
+      <Footer />
     </ThemeProvider>
   );
 }

@@ -2,21 +2,22 @@ import { useContext } from "react";
 import { ThemeContext } from "../../Ui/ThemeContext";
 import Boxs from "../Box/Boxs";
 import AboutSectionButtons from "../../../components/Buttons/AboutSectionButtons";
+import Profile2 from "../../../assets/Profile2.jpg";
 
 export default function AboutSection() {
   const { theme } = useContext(ThemeContext);
   const About = "About";
   const Me = "Me";
-  const imageUrl =
-    "https://www.shutterstock.com/image-illustration/cool-anime-guy-casual-outfit-600nw-2258372411.jpg";
+  // const imageUrl =
+  //   "https://www.shutterstock.com/image-illustration/cool-anime-guy-casual-outfit-600nw-2258372411.jpg";
 
   return (
     <section
       id="about"
-      className="w-full min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8"
+      className="w-full min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 "
     >
-      <article className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 w-full max-w-7xl mx-auto">
-        {/* Image Section - Reduced by 4% */}
+      <article className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-12 w-full max-w-7xl mx-auto">
+        {/* Image Section */}
         <div className="w-full lg:w-[48%] flex justify-center order-1 lg:order-1">
           {" "}
           {/* Reduced from 50% to 48% */}
@@ -59,7 +60,7 @@ export default function AboutSection() {
                   } rounded-lg overflow-hidden`}
                 >
                   <img
-                    src={imageUrl}
+                    src={Profile2}
                     alt="Cool anime guy in a casual outfit"
                     className="w-full h-auto object-cover transform transition-transform duration-700 hover:scale-105"
                     loading="lazy"
@@ -71,33 +72,33 @@ export default function AboutSection() {
           </div>
         </div>
 
-        {/* Text Section - Slightly expanded to 52% */}
-        <div className="w-full lg:w-[52%] order-2 lg:order-2 space-y-6">
+        {/* Text Section */}
+        <div className="w-full lg:w-7/12 order-1 lg:order-2 space-y-6 sm:space-y-8">
           <h1
             data-aos="fade-down"
-            className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-center lg:text-left"
           >
             <span>{About}</span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ff99] via-[#00dd99] to-[#00cc99] pl-3 sm:pl-4">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ff99] via-[#00dd99] to-[#00cc99] pl-2 sm:pl-3 md:pl-4">
               {Me}
             </span>
           </h1>
-          <div className="w-20 h-1 bg-[#00ff99] shadow-[0_0_10px_rgba(0,255,153,0.7)]"></div>
+          <div className="w-20 h-1 bg-[#00ff99] shadow-[0_0_10px_rgba(0,255,153,0.7)] mx-auto lg:mx-0"></div>
           <p
-            className="text-base sm:text-lg leading-relaxed"
+            className="text-base sm:text-lg md:text-xl leading-relaxed text-center lg:text-left max-w-2xl mx-auto lg:mx-0"
             data-aos="fade-right"
           >
-            I'm Sal Monineath, a front-end developer and graphic designer
-            passionate about crafting modern, visually appealing, and functional
-            web applications. With 20+ successful design projects, I blend
+            I'm Neath, a front-end developer and graphic designer passionate
+            about crafting modern, visually appealing, and functional web
+            applications. With 20+ successful design projects, I blend
             creativity with technical expertise.
           </p>
-          {/* short Info */}
-          <div>
+          {/* Short Info */}
+          <div className="flex justify-center lg:justify-start">
             <Boxs />
           </div>
-          {/* action buttons */}
-          <div>
+          {/* Action Buttons */}
+          <div className="flex justify-center lg:justify-start">
             <AboutSectionButtons />
           </div>
         </div>
