@@ -1,19 +1,5 @@
 import React, { useState } from "react";
 
-interface BlogPost {
-  id: number;
-  title: string;
-  excerpt: string;
-  content: string;
-  image: string;
-  category: "technology" | "design" | "business" | "personal";
-  tags: string[];
-  date: string;
-  readTime: string;
-  author: string;
-  featured: boolean;
-}
-
 interface CategoryFilter {
   id: string;
   label: string;
@@ -31,13 +17,28 @@ const Blog: React.FC = () => {
     { id: "personal", label: "Personal" },
   ];
 
+  interface BlogPost {
+    id: number;
+    title: string;
+    excerpt: string;
+    content: string;
+    image: string;
+    category: "technology" | "design" | "business" | "personal";
+    tags: string[];
+    date: string;
+    readTime: string;
+    author: string;
+    featured: boolean;
+  }
+
   const blogPosts: BlogPost[] = [
     {
       id: 1,
       title: "The Future of React in 2023",
       excerpt: "Exploring the latest trends and features in React ecosystem",
       content: "",
-      image: "/api/placeholder/600/400",
+      image:
+        "https://static.vecteezy.com/system/resources/previews/049/401/766/non_2x/react-icon-on-white-square-button-free-png.png",
       category: "technology",
       tags: ["React", "Frontend", "JavaScript"],
       date: "2023-05-15",
@@ -50,7 +51,7 @@ const Blog: React.FC = () => {
       title: "UX Principles for Modern Web Apps",
       excerpt: "Key design principles to improve user experience",
       content: "",
-      image: "/api/placeholder/600/400",
+      image: "https://miro.medium.com/v2/resize:fit:1400/0*oxK0EDien5p2_sIm.",
       category: "design",
       tags: ["UX", "Design", "UI"],
       date: "2023-04-22",
@@ -63,7 +64,8 @@ const Blog: React.FC = () => {
       title: "Building Scalable Microservices",
       excerpt: "Architecture patterns for growing applications",
       content: "",
-      image: "/api/placeholder/600/400",
+      image:
+        "https://media.licdn.com/dms/image/v2/D5612AQHohEEguHyyOg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1685162806957?e=2147483647&v=beta&t=t0esxHsPahQNtRuA6sFfiQ2MHZM2KDKA74V7r5pCUR4",
       category: "technology",
       tags: ["Backend", "Architecture", "Node.js"],
       date: "2023-03-10",
@@ -76,7 +78,8 @@ const Blog: React.FC = () => {
       title: "Remote Work Productivity Tips",
       excerpt: "How to stay productive while working from home",
       content: "",
-      image: "/api/placeholder/600/400",
+      image:
+        "https://islucid.com/wp-content/uploads/2023/02/8968947_4028561.jpg",
       category: "business",
       tags: ["Productivity", "Remote Work"],
       date: "2023-02-28",
@@ -89,7 +92,8 @@ const Blog: React.FC = () => {
       title: "My Journey Learning TypeScript",
       excerpt: "Personal experiences transitioning from JavaScript",
       content: "",
-      image: "/api/placeholder/600/400",
+      image:
+        "https://miro.medium.com/v2/resize:fit:1400/1*dSEr1chkE6quhDeOI4I-7w.jpeg",
       category: "personal",
       tags: ["TypeScript", "Learning"],
       date: "2023-01-15",
@@ -102,7 +106,8 @@ const Blog: React.FC = () => {
       title: "Sustainable Web Design Practices",
       excerpt: "Reducing the environmental impact of websites",
       content: "",
-      image: "/api/placeholder/600/400",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdg-tJIK78Hu--dqeJBhrb2UnEIqtTW56SGg&s",
       category: "design",
       tags: ["Sustainability", "Web Design"],
       date: "2022-12-05",
@@ -125,36 +130,49 @@ const Blog: React.FC = () => {
     <section id="blogs" className="w-full py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-2xl font-bold text-gray-400 mb-2">BLOG</h2>
-          <h1 className="text-5xl font-bold mb-4">Latest Articles</h1>
+          <h2
+            data-aos="fades-down"
+            className="text-2xl font-bold text-gray-400 mb-2"
+          >
+            BLOG
+          </h2>
+          <h1 data-aos="fade-up" className="text-5xl font-bold mb-4">
+            Latest Articles
+          </h1>
           <div className="w-20 h-1 bg-[#00ff99] mx-auto shadow-[0_0_10px_rgba(0,255,153,0.7)]"></div>
-          <p className="max-w-2xl mx-auto ">
+          <p
+            data-aos="fade-up"
+            data-aos-delay="200"
+            className="max-w-2xl mx-auto "
+          >
             Thoughts, stories and ideas about technology, design and more.
           </p>
         </div>
-
-        {/* Category Filter */}
+        {/* Category Filter */}{" "}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
           {categoryFilters.map((filter) => (
             <button
+              data-aos="fade-up"
+              data-aos-delay="300"
               key={filter.id}
               onClick={() => handleFilterChange(filter.id)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer 
                 ${
                   activeFilter === filter.id
-                    ? "bg-blue-600 text-white"
-                    : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+                    ? "bg-gradient-to-r from-[#00ff99] via-[#00dd99] to-[#00cc99] text-[#1c1c22]"
+                    : "bg-gray-800 text-gray-300 hover:bg-[#00ff99] hover:text-[#1c1c22]"
                 }`}
             >
               {filter.label}
             </button>
           ))}
         </div>
-
         {/* Blog Posts Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredPosts.map((post) => (
             <div
+              data-aos="fade-up"
+              data-aos-delay="400"
               key={post.id}
               className="bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-700"
               onMouseEnter={() => setHoveredPost(post.id)}
@@ -168,29 +186,29 @@ const Blog: React.FC = () => {
                   loading="lazy"
                 />
                 {post.featured && (
-                  <div className="absolute top-4 right-4 bg-green-600 text-white text-xs px-2 py-1 rounded-md">
+                  <div className="absolute top-4 right-4 bg-gradient-to-r from-[#00ff99] via-[#00dd99] to-[#00cc99] text-[#1c1c22] text-xs px-2 py-1 rounded-md">
                     Featured
                   </div>
                 )}
               </div>
 
               <div className="p-6">
-                <div className="flex items-center text-sm text-gray-500 mb-3">
+                <div className="flex items-center text-sm text-white mb-3">
                   <span>{post.date}</span>
                   <span className="mx-2">•</span>
                   <span>{post.readTime}</span>
                 </div>
 
-                <h3 className="text-xl font-bold text-gray-800 mb-2">
+                <h3 className="text-xl font-bold text-white mb-2">
                   {post.title}
                 </h3>
-                <p className="text-gray-600 mb-4">{post.excerpt}</p>
+                <p className="text-white mb-4">{post.excerpt}</p>
 
                 <div className="flex flex-wrap gap-2 mb-6">
                   {post.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-md"
+                      className="text-xs bg-gradient-to-r from-[#00ff99] via-[#00dd99] to-[#00cc99] text-[#1c1c22] px-2 py-1 rounded-md"
                     >
                       {tag}
                     </span>
@@ -198,12 +216,10 @@ const Blog: React.FC = () => {
                 </div>
 
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-500">
-                    By {post.author}
-                  </span>
+                  <span className="text-sm text-white">By {post.author}</span>
                   <a
                     href={`/blog/${post.id}`}
-                    className="text-sm font-medium text-green-600 hover:text-green-700 transition-colors"
+                    className="text-sm font-medium text-[#00ff99] hover:text-[#00cc99] transition-colors"
                   >
                     Read More →
                   </a>
@@ -212,14 +228,13 @@ const Blog: React.FC = () => {
 
               {/* Bottom indicator */}
               <div
-                className={`h-1 bg-green-500 transition-all duration-300 ${
+                className={`h-1 bg-[#00ff99] transition-all duration-300 ${
                   hoveredPost === post.id ? "w-full" : "w-0"
                 }`}
               ></div>
             </div>
           ))}
         </div>
-
         {filteredPosts.length === 0 && (
           <div className="text-center py-12">
             <p className="text-gray-500">No articles found in this category.</p>

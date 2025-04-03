@@ -4,7 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Buttons = () => {
-  const { theme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext) ?? { theme: "light" };
   const isDarkMode = theme === "dark";
 
   useEffect(() => {

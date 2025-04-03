@@ -49,15 +49,18 @@ export default function Contact() {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-2xl font-bold text-gray-400 mb-2">
+          <h2
+            data-aos="fade-down"
+            className="text-2xl font-bold text-gray-400 mb-2"
+          >
             GET IN TOUCH
           </h2>
-          <h1 className="text-5xl font-bold mb-4">
+          <h1 data-aos="fade-up" className="text-5xl font-bold mb-4">
             Contact{" "}
             <span
               className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ff99] via-[#00dd99] to-[#00cc99]"
-              data-aos="fade-right"
-              data-aos-delay="100"
+              data-aos="fade-up"
+              data-aos-delay="200"
             >
               Me
             </span>
@@ -68,6 +71,7 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
           {/* Contact Form */}
           <div
+            data-aos="fade-right"
             className="relative border border-[#00ff99]/30 rounded-xl bg-gray-800/80 backdrop-blur-sm 
                      p-8 shadow-xl hover:shadow-[0_0_20px_rgba(0,255,153,0.3)] transition-all duration-300"
           >
@@ -250,6 +254,8 @@ export default function Contact() {
           {/* Contact Info */}
           <div className="space-y-8">
             <div
+              data-aos="fade-left"
+              data-aos-delay="200"
               className="relative border border-[#00ff99]/30 rounded-xl bg-gray-800/80 backdrop-blur-sm 
                          p-8 shadow-xl hover:shadow-[0_0_20px_rgba(0,255,153,0.3)] transition-all duration-300"
             >
@@ -321,6 +327,8 @@ export default function Contact() {
 
             {/* Availability */}
             <div
+              data-aos="fade-left"
+              data-aos-delay="300"
               className="relative border border-[#00ff99]/30 rounded-xl bg-gray-800/80 backdrop-blur-sm 
                          p-8 shadow-xl hover:shadow-[0_0_20px_rgba(0,255,153,0.3)] transition-all duration-300"
             >
