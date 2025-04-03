@@ -1,71 +1,109 @@
-# SAL MONINEATH PORTFOLIO
+# React-Ts-Portfolio-Template
 
-**Showcase Your Skills, Inspire Your Future**
+### Overview
 
-![Last Commit](https://img.shields.io/github/last-commit/neathcmd/salmonineath-portfolio?style=flat-square)
-![Top Language](https://img.shields.io/github/languages/top/neathcmd/salmonineath-portfolio?style=flat-square)
-![Language Count](https://img.shields.io/github/languages/count/neathcmd/salmonineath-portfolio?style=flat-square)
+A cutting-edge web application designed to showcase professional work with exceptional user experience and aesthetic appeal. Built with modern web technologies, it combines performance with beautiful design.
 
-## 🚀 Built With
+## 🚀 Features
 
-- React Js
-- Typescript
+- 🌟 Modern, responsive design
+- 🎨 Interactive UI components
+- 🌗 Dark/Light mode toggle
+- 📂 Project showcase section
+- 📊 Skills visualization
+- ✨ Smooth animations
+- ⚡ Performance optimized for a seamless user experience
 
-##
+## 🛠 Built With
 
-## Table of Contents
+- ⚛️ React.js
+- 🟦 TypeScript
+- 🎨 Tailwind CSS
+- 🎭 AOS (Animate on Scroll)
 
-- [Overview](#overview)
+## 🏗 Getting Started
 
-- [Feature](#feature)
+Follow these steps to set up the project locally:
 
-- [Getting Started](https://www.example.com)
-
-  - [Prerequisites](https://www.example.com)
-
-  - [Installation](https://www.example.com)
-
-  - [Usage](https://www.example.com)
-
-  - [Testing](https://www.example.com)
-
-##
-
-## 🌟 Overview
-
-The `salmonineath-portfolio` is a cutting-edge web application designed to showcase professional work with exceptional user experience and aesthetic appeal. Built with modern web technologies, it combines performance with beautiful design.
-
-## 🚀 Why salmonineath-portfolio?
-
-This project revolutionizes portfolio building by offering:
-
-<div align="center">
-  <img src="https://res.cloudinary.com/demo/image/upload/v1633456327/portfolio-showcase.gif" width="600" alt="Portfolio Demo">
-</div>
-
-### ✨ Core Features
-
-| Feature                      | Description                                                | Technology                                                                                                        |
-| ---------------------------- | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| **Tailwind CSS Integration** | Utility-first CSS framework for rapid UI development       | ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white&style=flat-square) |
-| **TypeScript Foundation**    | Type-safe JavaScript development                           | ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white&style=flat-square)   |
-| **Dynamic Theming**          | Automatic light/dark mode with system preference detection | ![Theme](https://img.shields.io/badge/Dynamic_Theming-00ff99?style=flat-square)                                   |
-| **Interactive Components**   | Engaging UI elements with smooth transitions               | ![Framer](https://img.shields.io/badge/Animations-00ff99?style=flat-square)                                       |
-| **Performance Optimized**    | 90+ Lighthouse scores out of the box                       | ![Performance](https://img.shields.io/badge/Performance-00ff99?style=flat-square)                                 |
-
-## ✨ Features
-
-- Modern, responsive design
-- Interactive UI components
-- Dark/Light mode toggle
-- Project showcase section
-- Skills visualization
-- Smooth animations
-
-## 🛠️ Installation
-
-1. Clone the repository
+### 📥 Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/salmonineath-portfolio.git
+git clone https://github.com/neathcmd/React-Ts-Portfolio-Template.git
 ```
+
+### Navigate to the progect
+
+```bash
+cd React-Ts-Portfolio-Template
+```
+
+### 📦 Install dependencies
+
+```bash
+npm install
+```
+
+### 🚀 Start the development server
+
+```bash
+npm run dev
+🌍 Open in your browser
+Go to http://localhost:3000
+```
+
+### 📦 Build the application
+
+```bash
+npm run build
+```
+
+### 📂 Project Structure
+
+```bash
+React-Ts-Portfolio-Template/ │── dist/ # Build directory │── node_modules/ # Dependencies │── public/ # Static assets (e.g., images, favicons) │── src/ # Source code directory │ ├── App/ # Main application structure │ │ ├── Home/ # Home page components │ │ │ ├── Box/ # Box components │ │ │ │ ├── Boxes.tsx
+│ ├── components/ # Reusable UI components │ │ ├── About.tsx
+│ │ ├── Blog.tsx
+│ │ ├── Contact.tsx
+│ │ ├── Education.tsx
+│ │ ├── Experience.tsx
+│ │ ├── Hero.tsx
+│ │ ├── Portfolio.tsx
+│ │ ├── TechStack.tsx
+│ │ ├── Home.tsx
+│ ├── Ui/ # UI utilities │ │ ├── ThemeContext.tsx
+│ ├── assets/ # Images and other assets │ │ ├── profile.png
+│ │ ├── Profile2.jpg
+│ ├── components/Buttons/ # Buttons components │ │ ├── AboutSectionButtons.tsx
+│ │ ├── Buttons.tsx
+│ ├── components/icons/ # Social icons │ │ ├── SocialIcons.tsx
+│ ├── components/Loading/ # Loading animations │ │ ├── CodeLoader.tsx
+│ ├── components/ProgressBar/ # Progress bar │ │ ├── ScrollProgressBar.tsx
+│ ├── Footer.tsx
+│ ├── Navbar.tsx
+│── styles/ # Global CSS styles │ ├── Animation.css
+│ ├── App.css
+│── index.css
+│── main.tsx
+│── vite-env.d.ts
+│── .gitignore
+│── eslint.config.js
+│── index.html
+│── package.json
+│── package-lock.json
+│── README.md
+│── tailwind.config.ts
+│── tsconfig.app.json
+│── tsconfig.json
+│── tsconfig.node.json
+│── vite.config.ts
+```
+
+This structure follows your uploaded images and maintains readability in your README file. Let me know if you need any modifications! 🚀
+
+### 🙌 Acknowledgments
+
+Special thanks to the creators of the libraries and frameworks used in this project.
+
+### 📜 License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
