@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function Experience() {
-  const [activeCard, setActiveCard] = useState(null);
+  const [activeCard, setActiveCard] = useState<number | null>(null);
 
   const experienceItems = [
     {
@@ -50,16 +50,15 @@ export default function Experience() {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-2xl font-bold text-gray-400 mb-2">
+          <h2
+            data-aos="fade-down"
+            className="text-2xl font-bold text-gray-400 mb-2"
+          >
             PROFESSIONAL JOURNEY
           </h2>
-          <h1 className="text-5xl font-bold mb-4">
+          <h1 data-aos="fade-up" className="text-5xl font-bold mb-4">
             Work{" "}
-            <span
-              className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ff99] via-[#00dd99] to-[#00cc99]"
-              data-aos="fade-right"
-              data-aos-delay="100"
-            >
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ff99] via-[#00dd99] to-[#00cc99]">
               Experience
             </span>
           </h1>
@@ -69,6 +68,7 @@ export default function Experience() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
           {experienceItems.map((item) => (
             <div
+              data-aos="fade-up"
               key={item.id}
               className="relative border border-[#00ff99]/30 rounded-xl bg-gray-800/80 backdrop-blur-sm 
                    hover:bg-gray-700 transition-all duration-300

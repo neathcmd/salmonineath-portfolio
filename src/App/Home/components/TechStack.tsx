@@ -126,12 +126,25 @@ const TechStack: React.FC = () => {
     <section id="tech-stack" className="w-full py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-2xl font-bold text-gray-400 mb-2">
+          <h2
+            data-aos="fade-down"
+            className="text-2xl font-bold text-gray-400 mb-2"
+          >
             TECHNOLOGIES
           </h2>
-          <h1 className="text-5xl font-bold mb-4">My Tech Stack</h1>
+          {/* #00ff99 */}
+          <h1 data-aos="fade-up" className="text-5xl font-bold mb-4">
+            My Tech{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ff99] via-[#00dd99] to-[#00cc99]">
+              Stack
+            </span>
+          </h1>
           <div className="w-20 h-1 bg-[#00ff99] mx-auto shadow-[0_0_10px_rgba(0,255,153,0.7)]"></div>
-          <p className=" max-w-2xl mx-auto pt-8">
+          <p
+            data-aos="fade-up"
+            data-aos-delay="200"
+            className=" max-w-2xl mx-auto pt-8"
+          >
             These are the technologies I've worked with. I'm always exploring
             new tools and frameworks to expand my skill set.
           </p>
@@ -141,13 +154,15 @@ const TechStack: React.FC = () => {
         <div className="flex flex-wrap justify-center gap-3 mb-12">
           {categoryFilters.map((category) => (
             <button
+              data-aos="fade-up"
+              data-aos-delay="300"
               key={category.id}
               onClick={() => handleCategoryChange(category.id)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer  
                 ${
                   activeCategory === category.id
-                    ? "bg-blue-600 text-white"
-                    : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+                    ? "bg-gradient-to-r from-[#00ff99] via-[#00dd99] to-[#00cc99] text-[#1c1c22]"
+                    : "bg-gray-800 text-gray-300 hover:bg-[#00ff99] hover:text-[#1c1c22]"
                 }`}
             >
               {category.label}
@@ -163,8 +178,10 @@ const TechStack: React.FC = () => {
         >
           {filteredSkills.map((skill) => (
             <div
+              data-aos="fade-up"
+              data-aos-delay="400"
               key={skill.id}
-              className="flex flex-col items-center bg-gray-800 rounded-lg p-6 shadow-lg border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:transform hover:-translate-y-1"
+              className="flex flex-col items-center bg-gray-800 rounded-lg p-6 shadow-lg border border-gray-700 hover:border-[#00ff99] transition-all duration-300 hover:transform hover:-translate-y-1"
             >
               <div className="text-4xl mb-3">{skill.icon}</div>
               <h3 className="text-lg font-bold text-white mb-2">
@@ -175,7 +192,7 @@ const TechStack: React.FC = () => {
                   <div
                     key={i}
                     className={`w-2 h-2 rounded-full mx-1 ${
-                      i < skill.proficiency ? "bg-blue-500" : "bg-gray-600"
+                      i < skill.proficiency ? "bg-[#00ff99]" : "bg-gray-600"
                     }`}
                   ></div>
                 ))}

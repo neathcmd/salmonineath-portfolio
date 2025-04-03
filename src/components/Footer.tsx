@@ -8,7 +8,7 @@ interface FooterLink {
 }
 
 interface SocialLink {
-  icon: JSX.Element;
+  icon: React.ReactNode; // Changed from JSX.Element to React.ReactNode
   href: string;
   label: string;
 }
@@ -29,29 +29,24 @@ const SOCIAL_LINKS: SocialLink[] = [
   { icon: <FaInstagram />, href: "https://instagram.com", label: "Instagram" },
 ];
 
-export default function Footer(): JSX.Element {
+export default function Footer() {
   const [email, setEmail] = useState<string>("");
   const [subscribed, setSubscribed] = useState<boolean>(false);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
-    // Simulate newsletter subscription (replace with actual API call)
     setSubscribed(true);
     setEmail("");
-    setTimeout(() => setSubscribed(false), 3000); // Reset after 3 seconds
+    setTimeout(() => setSubscribed(false), 3000);
   };
 
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="py-12 ">
+    <footer className="py-12 bg-[#1c1c22] text-gray-300">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* top border */}
         <div className="border-t border-gray-700 pb-8"></div>
-
-        {/* content */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-          {/* Brand & Description */}
           <div className="space-y-4">
             <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#00ff99] to-[#0099ff]">
               Portfolio
@@ -75,8 +70,6 @@ export default function Footer(): JSX.Element {
               ))}
             </div>
           </div>
-
-          {/* Quick Links */}
           <div>
             <h3 className="text-lg font-semibold text-[#00ff99] mb-4">
               Quick Links
@@ -86,7 +79,7 @@ export default function Footer(): JSX.Element {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-sm hover:text-[#00ff99] transition-colors duration-200"
+                    className="text-sm text-gray-300 hover:text-[#00ff99] transition-colors duration-200"
                   >
                     {link.label}
                   </a>
@@ -94,8 +87,6 @@ export default function Footer(): JSX.Element {
               ))}
             </ul>
           </div>
-
-          {/* Newsletter Signup */}
           <div>
             <h3 className="text-lg font-semibold text-[#00ff99] mb-4">
               Newsletter
@@ -105,29 +96,22 @@ export default function Footer(): JSX.Element {
             </p>
             <form onSubmit={handleSubmit} className="space-y-3">
               <div className="relative">
-                <div>
-                  {/* input */}
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Enter your email"
-                    className="w-full px-4 py-2 bg-[#28282f] border border-gray-700 rounded-md text-sm text-gray-200 focus:outline-none focus:ring-2 focus:ring-[#00ff99] transition-all duration-200"
-                    required
-                    aria-label="Email for newsletter"
-                  />
-                </div>
-                {/* button */}
-                <div>
-                  <button
-                    type="submit"
-                    className="absolute right-1 top-1/2 -translate-y-1/2 bg-[#00ff99] text-[#1c1c22] cursor-pointer px-4 py-2 rounded-md text-sm font-medium hover:bg-[#00dd99] transition-colors duration-200"
-                  >
-                    Subscribe
-                  </button>
-                </div>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  className="w-full px-4 py-2 bg-[#28282f] border border-gray-700 rounded-md text-sm text-gray-200 focus:outline-none focus:ring-2 focus:ring-[#00ff99] transition-all duration-200 pr-24"
+                  required
+                  aria-label="Email for newsletter"
+                />
+                <button
+                  type="submit"
+                  className="absolute right-1 top-1/2 -translate-y-1/2 bg-[#00ff99] text-[#1c1c22] px-3 py-1 rounded-md text-sm font-medium hover:bg-[#00dd99] transition-colors duration-200"
+                >
+                  Subscribe
+                </button>
               </div>
-
               {subscribed && (
                 <p className="text-sm text-[#00ff99] animate-fade-in">
                   Thanks for subscribing!
@@ -136,11 +120,9 @@ export default function Footer(): JSX.Element {
             </form>
           </div>
         </div>
-
-        {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-gray-700 text-center">
-          <p className="text-sm">
-            &copy; {currentYear} Portfolio. All rights reserved.
+          <p className="text-sm text-gray-400">
+            © {currentYear} Portfolio. All rights reserved.
           </p>
         </div>
       </div>

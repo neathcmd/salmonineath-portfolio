@@ -5,7 +5,7 @@ import AboutSectionButtons from "../../../components/Buttons/AboutSectionButtons
 import Profile2 from "../../../assets/Profile2.jpg";
 
 export default function AboutSection() {
-  const { theme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext)!;
   const About = "About";
   const Me = "Me";
   // const imageUrl =

@@ -1,10 +1,7 @@
 import { useState, useEffect } from "react";
-import { ThemeContext } from "../../App/Ui/ThemeContext";
-import { useContext } from "react";
 
 const ScrollProgressBar = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
-  const { theme } = useContext(ThemeContext);
 
   useEffect(() => {
     const updateScrollProgress = () => {

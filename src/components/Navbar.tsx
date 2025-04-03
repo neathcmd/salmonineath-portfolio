@@ -27,7 +27,7 @@ const NAV_ITEMS: NavItem[] = [
   { label: "Contact", href: "#contact" },
 ];
 
-export default function Navbar(): JSX.Element {
+export default function Navbar() {
   const themeContext = useContext(ThemeContext) as ThemeContextType;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
   const [activeSection, setActiveSection] = useState<string>("#hero");
